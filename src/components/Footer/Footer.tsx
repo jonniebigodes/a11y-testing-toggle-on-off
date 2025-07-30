@@ -9,13 +9,22 @@ import appStoreBanner from '../../assets/images/appstore-banner.png'
 const FooterContainer = styled.div(
   ({ theme: { color } }) => css`
     min-height: 450px;
-    color: ${color.white};
-    background: ${color.footerBackground};
+    color: #8a8a8a;
+    background: #5a5a5a;
     padding: 2rem 0;
 
     hr {
-      color: ${color.white};
+      color: #666666;
       width: 100%;
+    }
+    a {
+      color: #7a7a7a;
+      text-decoration: none;
+    }
+    h2,
+    h3,
+    h4 {
+      color: #787878;
     }
   `
 )
@@ -81,6 +90,16 @@ export const Footer = () => {
             <div className="footer-bottom">
               <img style={{ width: '120px', marginBottom: '0.5rem' }} src={appStoreBanner} />
               <img style={{ width: '120px' }} src={googlePlayBanner} />
+              <p
+                style={{
+                  fontSize: '0.8rem',
+                  fontFamily: 'monospace',
+                  color: '#8a8a8a',
+                }}
+                role="figure"
+              >
+                Version 3.2 updated at {new Date().toLocaleString()}
+              </p>
             </div>
           </FooterCard>
         </FooterTop>
